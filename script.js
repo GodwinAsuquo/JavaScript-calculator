@@ -1,24 +1,56 @@
+const startCalculator = false;
+while(!startCalculator){
+let operator = prompt("Please enter operation you want to perform (+,-,/,*)");
 
 
-let operator = prompt("Please enter operation you want to perform");
+if(operator === "+" || operator === "-" || operator === "/" || operator === "*") {
 const a = parseInt(prompt ('Please input first number'));
 const b = parseInt(prompt ('Please input second number'));
 
+let answer;
     if(operator === "+"){
-        let answer = a + b;
-       console.log(answer);
+      if (isNaN(a) || isNaN(b)){
+         alert("Invalid number inputed. Please try again")
+      } else{
+         answer = a + b;
+         alert (answer)
+      }
+       
     }
     else if(operator === "-"){
-        console.log(a - b);
+      if (isNaN(a) || isNaN(b)){
+         alert("Invalid number inputed. Please try again")
+      } else{
+         answer = a - b;
+         alert (answer)
+      }
     }
     else if(operator === "*"){
-       console.log(a * b)
+      if (isNaN(a) || isNaN(b)){
+         alert("Invalid number inputed. Please try again")
+      } else{
+         answer = a * b;
+         alert (answer)
+      }
     }
     else if(operator === "/"){
-       console.log(a / b)
+      if (isNaN(a) || isNaN(b)){
+         alert("Invalid number inputed. Please try again")
+      } else{
+         answer = a / b;
+         alert (answer)
+      }
     }
-     else {console.log("Please enter the required inputs")
+
 }
-
-
-
+else{
+alert("Invalid Operator inputed. Please try again.")
+}
+ 
+const calculateAgain = prompt("Do you want to perform another operation (y/n)")
+if (calculateAgain == "y"){
+   continue;
+} else{
+   break;
+}
+}
